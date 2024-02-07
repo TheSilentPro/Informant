@@ -1,0 +1,6 @@
+name: ${project.name}
+description: ${project.description}
+
+main: tsp.informant.bungee.Informant
+version: ${project.version}
+author: TheSilentPro (Silent)

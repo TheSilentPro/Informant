@@ -1,0 +1,40 @@
+{
+  "interval": 86400,
+  "webhook-url": "",
+  "checkInstalled": true,
+  "plugins": [],
+  "message": {
+    "author": {
+      "name": "Plugin update available!",
+      "iconLink": "%resourceIconUrl%",
+      "url": null
+    },
+    "title": {
+      "name": "%resourceTitle% (%resourceId%)",
+      "url": null
+    },
+    "description": "%resourceTag% \n",
+    "footer": {
+      "text": "",
+      "url": null
+    },
+    "timestamp": true,
+    "fields": [
+      {
+        "inline": true,
+        "name": "Latest Version",
+        "value": "%resourceCurrentVersion%"
+      },
+      {
+        "inline": true,
+        "name": "Your Version",
+        "value": "%pluginCurrentVersion%"
+      },
+      {
+        "inline": true,
+        "name": "Download",
+        "value": "[Spigot](https://www.spigotmc.org/resources/%resourceId%)"
+      }
+    ]
+  }
+}

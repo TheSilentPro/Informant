@@ -1,0 +1,8 @@
+{
+  "id":"informant",
+  "name":"${project.name}",
+  "description":"${project.description}",
+  "version":"${project.version}",
+  "authors":["Silent, TheDevTec"],
+  "main":"tsp.informant.velocity.Informant"
+}

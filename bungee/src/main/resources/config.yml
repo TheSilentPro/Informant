@@ -1,0 +1,58 @@
+# The interval at which plugins are checked in seconds
+# When set to 0, timed checks will be disabled. The plugin will still check on startup.
+interval: 0
+
+# Checks installed plugins for updates
+# This will only check it if the plugin has specifically set the 'spigot-id' variable in their plugin.yml
+checkInstalled: true
+
+# Plugins to check
+# Format: name:id
+#
+# Name is the name of the plugin in your /plugins folder
+# ID can be found in the url of the plugin on spigot
+# For example the plugin below has the ID: 84967. That is the number after the dot.
+# https://www.spigotmc.org/resources/headdb-head-menu-auto-update-free.84967
+plugins:
+  - ""
+
+# Message Customization
+message:
+  # Message sent to the console
+  console: "%name% has a new version available! Latest: %latestVersion% | Installed: %currentVersion%"
+
+  # The url of the discord webhook
+  # Set this to empty or null to disable.
+  # Channel Settings > Integrations > New Webhook > Copy Webhook URL
+  webhookUrl: "https://discord.com/api/webhooks/1204560237038801036/pxTzsHXv0picHzDHODMuQYrv8wOMqm4oey4yV9vSvMAGvSZ1B7Kpjkw-zxlhCNeCotr6"
+
+  # Embed Author
+  author:
+    name: "Plugin update available!"
+    icon: "%iconUrl%"
+    url: ""
+
+  # Embed Title
+  title:
+    name: "%title% (%id%)"
+    url: "https://www.spigotmc.org/resources/%id%"
+
+  # Embed Description
+  # Use \n for new line
+  # Note that %resourceDescription% also returns markdown values like [CODE], [BOLD], etc...
+  description: "%tag% \n"
+
+  footer:
+    name: "%rating% (%totalReviews%/%uniqueReviews%)"
+    icon: ""
+
+  timestamp: true
+
+  # Embed Fields
+  # Format: INLINE;NAME;VALUE
+  # Fields MUST be separated with a colon (;)
+  # Fields MUST have all 3 values defined
+  fields:
+    - "true;Latest Version;%latestVersion%"
+    - "true;Your Version;%currentVersion%"
+    - "true;Download;[Spigot](https://www.spigotmc.org/resources/%id%)"
